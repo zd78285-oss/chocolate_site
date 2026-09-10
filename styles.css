@@ -49,7 +49,7 @@
   --text-4xl:  3rem;
   --text-5xl:  clamp(3rem, 8vw, 5.5rem);
 
-  /* Отступы (ритм 4/8px) */
+  /* Отступы */
   --sp-1:  0.25rem;
   --sp-2:  0.5rem;
   --sp-3:  0.75rem;
@@ -337,7 +337,6 @@ button { cursor: pointer; }
   position: relative;
 }
 
-/* scroll-expand из вашего кода */
 .scroll-expand {
   position: relative;
   width: 100%;
@@ -549,7 +548,6 @@ button { cursor: pointer; }
   overflow: hidden;
 }
 
-/* drift-wall из вашего кода */
 .drift-wall {
   position: relative;
   width: 100%;
@@ -557,10 +555,10 @@ button { cursor: pointer; }
   overflow: hidden;
   perspective: var(--dw-perspective, 1200px);
   perspective-origin: 50% 50%;
-  --dw-tile-w: 200px;
-  --dw-tile-h: 132px;
-  --dw-gap: 18px;
-  --dw-radius: 14px;
+  --dw-tile-w: 150px;      /* вертикальный формат 2:3 */
+  --dw-tile-h: 225px;
+  --dw-gap: 20px;
+  --dw-radius: 18px;
   --dw-lift: 64px;
   --dw-dim: 0.55;
   --dw-gray: 0;
@@ -609,22 +607,8 @@ button { cursor: pointer; }
   flex: 0 0 auto;
   outline: none;
   transform-style: preserve-3d;
-}
-
-.drift-wall__inner {
-  position: absolute;
-  inset: calc(var(--dw-gap) / 2);
-  display: block;
-  border-radius: var(--dw-radius);
-  overflow: hidden;
-  background: #0b0b12;
-  opacity: var(--dw-dim);
-  transform: translateZ(0);
-  pointer-events: none;
-  transition:
-    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity  0.42s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+  padding: calc(var(--dw-gap) / 2);
+  box-sizing: border-box;
 }
 
 .drift-wall__tile img {
@@ -632,39 +616,38 @@ button { cursor: pointer; }
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: var(--dw-radius);
   filter: grayscale(var(--dw-gray)) saturate(0.92);
-  transition: filter 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    filter 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
   user-select: none;
   -webkit-user-drag: none;
 }
 
 .drift-wall__overlay {
   position: absolute;
-  inset: 0;
+  inset: calc(var(--dw-gap) / 2);
+  border-radius: var(--dw-radius);
   background: var(--dw-overlay);
   opacity: 0.42;
   pointer-events: none;
   transition: opacity 0.42s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.drift-wall__tile:hover .drift-wall__inner,
-.drift-wall__tile.is-active .drift-wall__inner,
-.drift-wall__tile:focus-visible .drift-wall__inner {
-  opacity: 1;
-  transform: scale(1.04);
-}
 .drift-wall__tile:hover img,
 .drift-wall__tile.is-active img,
 .drift-wall__tile:focus-visible img {
   filter: grayscale(0) saturate(1.05);
+  transform: scale(1.04);
 }
 .drift-wall__tile:hover .drift-wall__overlay,
 .drift-wall__tile.is-active .drift-wall__overlay,
 .drift-wall__tile:focus-visible .drift-wall__overlay {
   opacity: 0;
 }
-.drift-wall__tile:focus-visible .drift-wall__inner {
-  box-shadow: 0 0 0 2px rgba(255,255,255,0.9);   /* только обводка для клавиатуры */
+.drift-wall__tile:focus-visible img {
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.9);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -870,12 +853,13 @@ button { cursor: pointer; }
 }
 
 .contacts-link {
-  color: var(--accent);
+  color: var(--text);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease);
 }
-.contacts-link:hover { color: var(--accent-dark); }
+.contacts-link:hover { color: var(--accent); }
 
 .social-row {
   display: flex;
@@ -989,9 +973,25 @@ button { cursor: pointer; }
   .reviews-grid  { grid-template-columns: 1fr; }
   .section { padding-block: var(--sp-16); }
   .footer-inner { flex-direction: column; text-align: center; }
+
+  .drift-wall {
+    --dw-tile-w: 100px;
+    --dw-tile-h: 150px;
+    --dw-gap: 14px;
+    --dw-radius: 14px;
+    height: 460px !important;
+  }
 }
 
 @media (max-width: 480px) {
   .container { padding-inline: var(--sp-4); }
   .scroll-expand__title { --se-title-size: 2.5rem; }
+
+  .drift-wall {
+    --dw-tile-w: 78px;
+    --dw-tile-h: 116px;
+    --dw-gap: 12px;
+    --dw-radius: 12px;
+    height: 380px !important;
+  }
 }
