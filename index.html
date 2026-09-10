@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Шоколад — Салон красоты · Семилуки</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══ ШАПКА ═══ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="Шоколад — на главную">
+        <span class="logo__word">Шоколад</span>
+        <span class="logo__sub">Салон красоты · Семилуки</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a class="nav__link" href="#services">Услуги</a>
+        <a class="nav__link" href="#gallery">Работы</a>
+        <a class="nav__link" href="#reviews">Отзывы</a>
+        <a class="nav__link" href="#contacts">Контакты</a>
+      </nav>
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a class="mobile-nav__link" href="#services">Услуги</a>
+      <a class="mobile-nav__link" href="#gallery">Работы</a>
+      <a class="mobile-nav__link" href="#reviews">Отзывы</a>
+      <a class="mobile-nav__link" href="#contacts">Контакты</a>
+    </div>
+  </header>
+
+  <!-- ═══ HERO · scroll-expand ═══ -->
+  <section class="hero-wrap" aria-label="Главный экран">
+    <div class="scroll-expand" id="hero-expand">
+      <div class="scroll-expand--scroller" id="hero-scroller">
+        <div class="scroll-expand__track" id="hero-track">
+          <div class="scroll-expand__stage" id="hero-stage" style="height: 100vh;">
+            <div class="scroll-expand__frame" id="hero-frame">
+              <!-- Placeholder: замените src на своё фото -->
+              <img
+                class="scroll-expand__media"
+                id="hero-media"
+                src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1800&q=80"
+                alt="Интерьер салона Шоколад"
+              />
+            </div>
+            <div class="scroll-expand__scrim" id="hero-scrim" aria-hidden="true"></div>
+            <div class="scroll-expand__overlay" id="hero-overlay" aria-hidden="true">
+              <p class="hero-tagline">Искусство преображения</p>
+            </div>
+            <h1 class="scroll-expand__title" id="hero-title">Шоколад</h1>
+            <p class="scroll-expand__hint" id="hero-hint" aria-hidden="true">прокрутите вниз</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ УСЛУГИ ═══ -->
+  <section class="section" id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-label" aria-hidden="true">01 — Услуги</div>
+      <h2 class="section-title" id="services-heading">Всё для вашего образа</h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">✦</div>
+          <h3 class="service-card__title">Стрижки и укладки</h3>
+          <p class="service-card__desc">Мужские, женские и детские стрижки. Вечерние и свадебные укладки.</p>
+          <span class="service-card__price">от 500 ₽</span>
+        </article>
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">✦</div>
+          <h3 class="service-card__title">Окрашивание</h3>
+          <p class="service-card__desc">Балаяж, шатуш, омбре, тонирование, классическое и сложное окрашивание.</p>
+          <span class="service-card__price">от 1 500 ₽</span>
+        </article>
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">✦</div>
+          <h3 class="service-card__title">Уход за волосами</h3>
+          <p class="service-card__desc">Кератиновое выпрямление, ботокс для волос, восстанавливающие маски.</p>
+          <span class="service-card__price">от 2 000 ₽</span>
+        </article>
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">✦</div>
+          <h3 class="service-card__title">Маникюр и педикюр</h3>
+          <p class="service-card__desc">Классический, аппаратный, гель-лак, наращивание ногтей, nail-art.</p>
+          <span class="service-card__price">от 700 ₽</span>
+        </article>
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">✦</div>
+          <h3 class="service-card__title">Брови и ресницы</h3>
+          <p class="service-card__desc">Коррекция и окрашивание бровей, ламинирование, наращивание ресниц.</p>
+          <span class="service-card__price">от 600 ₽</span>
+        </article>
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">✦</div>
+          <h3 class="service-card__title">Макияж</h3>
+          <p class="service-card__desc">Дневной, вечерний и свадебный макияж от профессиональных визажистов.</p>
+          <span class="service-card__price">от 1 200 ₽</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ГАЛЕРЕЯ · drift-wall ═══ -->
+  <section class="section section--dark" id="gallery" aria-labelledby="gallery-heading">
+    <div class="container">
+      <div class="section-label section-label--light" aria-hidden="true">02 — Работы</div>
+      <h2 class="section-title section-title--light" id="gallery-heading">Наши работы</h2>
+      <p class="section-sub section-sub--light">Фотографии ваших работ появятся здесь — замените src у каждого img.</p>
+    </div>
+
+    <div class="drift-wall-wrap">
+      <div
+        class="drift-wall"
+        id="driftWall"
+        role="region"
+        aria-label="Галерея работ"
+        style="--dw-perspective: 1100px; height: 520px;"
+      >
+        <div class="drift-wall__plane" id="driftPlane">
+
+          <!-- Колонка 1 -->
+          <div class="drift-wall__col">
+            <div class="drift-wall__track" data-speed="1">
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: стрижка 1">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=400&q=75" alt="Стрижка" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: окрашивание 1">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=75" alt="Окрашивание" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: укладка 1">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=400&q=75" alt="Укладка" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: стрижка 2">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&q=75" alt="Стрижка" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Колонка 2 -->
+          <div class="drift-wall__col">
+            <div class="drift-wall__track" data-speed="-1.3">
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: маникюр 1">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=75" alt="Маникюр" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: брови 1">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&q=75" alt="Брови" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: балаяж 1">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400&q=75" alt="Балаяж" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: макияж 1">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&q=75" alt="Макияж" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Колонка 3 -->
+          <div class="drift-wall__col">
+            <div class="drift-wall__track" data-speed="0.8">
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: укладка 2">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&q=75" alt="Укладка" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: стрижка 3">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1582095133179-bfd08e2fb6b9?w=400&q=75" alt="Стрижка" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: окрашивание 2">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=400&q=75" alt="Окрашивание" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: маникюр 2">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=75" alt="Маникюр" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Колонка 4 -->
+          <div class="drift-wall__col">
+            <div class="drift-wall__track" data-speed="-0.9">
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: брови 2">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&q=75" alt="Брови" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: макияж 2">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&q=75" alt="Макияж" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: укладка 3">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=400&q=75" alt="Укладка" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: балаяж 2">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400&q=75" alt="Балаяж" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Колонка 5 -->
+          <div class="drift-wall__col">
+            <div class="drift-wall__track" data-speed="1.2">
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: стрижка 4">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1582095133179-bfd08e2fb6b9?w=400&q=75" alt="Стрижка" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: окрашивание 3">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=75" alt="Окрашивание" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: маникюр 3">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=75" alt="Маникюр" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="drift-wall__tile" tabindex="0" aria-label="Работа: укладка 4">
+                <div class="drift-wall__inner"></div>
+                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&q=75" alt="Укладка" />
+                <div class="drift-wall__overlay" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /plane -->
+      </div><!-- /drift-wall -->
+    </div>
+  </section>
+
+  <!-- ═══ ОТЗЫВЫ ═══ -->
+  <section class="section" id="reviews" aria-labelledby="reviews-heading">
+    <div class="container">
+      <div class="section-label" aria-hidden="true">03 — Отзывы</div>
+      <h2 class="section-title" id="reviews-heading">Что говорят клиенты</h2>
+      <div class="reviews-grid">
+        <blockquote class="review-card">
+          <p class="review-card__text">«Хожу в Шоколад уже три года. Мастера — профессионалы с большой буквы, всегда слышат, чего хочется. Результат каждый раз превосходит ожидания!»</p>
+          <footer class="review-card__footer">
+            <div class="review-card__avatar" aria-hidden="true">А</div>
+            <div>
+              <cite class="review-card__name">Анна К.</cite>
+              <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            </div>
+          </footer>
+        </blockquote>
+        <blockquote class="review-card">
+          <p class="review-card__text">«Делала балаяж — просто восторг. Цвет получился невероятно красивым, а волосы стали ещё живее. Спасибо Марине за волшебные руки!»</p>
+          <footer class="review-card__footer">
+            <div class="review-card__avatar" aria-hidden="true">О</div>
+            <div>
+              <cite class="review-card__name">Ольга М.</cite>
+              <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            </div>
+          </footer>
+        </blockquote>
+        <blockquote class="review-card">
+          <p class="review-card__text">«Приятная атмосфера, кофе и разговор по душе. Маникюр держится три недели. Обязательно вернусь!»</p>
+          <footer class="review-card__footer">
+            <div class="review-card__avatar" aria-hidden="true">Е</div>
+            <div>
+              <cite class="review-card__name">Елена Д.</cite>
+              <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ═══ КОНТАКТЫ ═══ -->
+  <section class="section" id="contacts" aria-labelledby="contacts-heading">
+    <div class="container">
+      <div class="section-label" aria-hidden="true">05 — Контакты</div>
+        <h2 class="section-title" id="contacts-heading">Как нас найти</h2>
+        <ul class="contacts-list">
+          <li class="contacts-item">
+            <span class="contacts-item__icon" aria-hidden="true">📍</span>
+            <div>
+              <strong>Адрес</strong>
+              <a class="contacts-link" href="https://yandex.ru/maps/10682/semiluky/house/ulitsa_25_let_oktyabrya_134_2b/Z0AYdgViSUIOQFtrfXtxcX9hYA==/?from=mapframe" target="_blank" rel="noopener">ул. 25 лет Октября, 134/2Б, Семилуки, Воронежская область</a>
+            </div>
+          </li>
+          <li class="contacts-item">
+            <span class="contacts-item__icon" aria-hidden="true">📞</span>
+            <div>
+              <strong>Телефон</strong>
+              <a class="contacts-link" href="tel:+7XXXXXXXXXX">+7 (___) ___-__-__</a>
+            </div>
+          </li>
+          <li class="contacts-item">
+            <span class="contacts-item__icon" aria-hidden="true">🕐</span>
+            <div>
+              <strong>Режим работы</strong>
+              <span>Пн–Сб: 9:00 – 20:00</span>
+              <span>Вс: 10:00 – 18:00</span>
+            </div>
+          </li>
+          <li class="contacts-item">
+            <span class="contacts-item__icon" aria-hidden="true">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <a class="contacts-link" href="/cdn-cgi/l/email-protection#b3daddd5dcf3c0dbdcd8dcdfd2d79ec0d6dedadfc6d8da9dc1c6"><span class="__cf_email__" data-cfemail="076e69616847746f686c686b66632a74626a6e6b726c6e297572">[email&#160;protected]</span></a>
+            </div>
+          </li>
+        </ul>
+        <div class="social-row" aria-label="Социальные сети">
+          <a class="social-btn" href="#" aria-label="ВКонтакте">ВК</a>
+          <a class="social-btn" href="#" aria-label="Telegram">TG</a>
+          <a class="social-btn" href="#" aria-label="WhatsApp">WA</a>
+        </div>
+    </div>
+  </section>
+
+  <!-- ═══ КАРТА ═══ -->
+  <section class="map-section" aria-label="Расположение на карте">
+    <div class="map-container" aria-label="Яндекс Карта">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?ll=39.022079%2C51.700324&z=17&pt=39.022079%2C51.700324%2Cpm2rdm~39.022079%2C51.700324%2Cpm2rdm&text=%D1%83%D0%BB.%2025%20%D0%BB%D0%B5%D1%82%20%D0%9E%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8F%2C%20134%2F2%D0%91%2C%20%D0%A1%D0%B5%D0%BC%D0%B8%D0%BB%D1%83%D0%BA%D0%B8&l=map"
+        width="100%"
+        height="420"
+        frameborder="0"
+        allowfullscreen
+        title="Расположение салона Шоколад на карте"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- ═══ ПОДВАЛ ═══ -->
+  <footer class="site-footer" aria-label="Подвал сайта">
+    <div class="container footer-inner">
+      <span class="footer-brand">Шоколад · Семилуки</span>
+      <span class="footer-copy">© 2026 Все права защищены</span>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="main.js"></script>
+</body>
+</html>
